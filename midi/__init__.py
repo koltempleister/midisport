@@ -1,4 +1,4 @@
-class Midi:
+class Parser:
     n_ports = 8
 
     def config_2_hex(self, config):
