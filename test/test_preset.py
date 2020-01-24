@@ -1,6 +1,6 @@
 import pytest
 
-from midisport_config.preset import Preset
+from midisport.preset.preset import Preset
 
 
 def test_it_has_a_name():

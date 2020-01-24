@@ -1,6 +1,6 @@
 import pytest
 
-from sysex.MidisportSysex import MidisportSysex
+from midisport.sysex.MidisportSysex import MidisportSysex
 
 
 class TestSysex:

@@ -1,4 +1,4 @@
-class Parser:
+class PortMapSysexParser:
     n_ports = 8
 
     def out(self, config):
