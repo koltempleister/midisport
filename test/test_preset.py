@@ -2,6 +2,12 @@ import pytest
 
 from midisport.preset.preset import Preset
 
+def test_it_has_an_id():
+    preset = Preset()
+
+    preset.set_id(1)
+
+    assert preset.get_id() == 1
 
 def test_it_has_a_name():
     preset = Preset()

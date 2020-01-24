@@ -16,3 +16,9 @@ class Preset():
 
     def get_value(self):
         return self.value
+
+    def set_id(self, id):
+        self.id = id
+
+    def get_id(self):
+        return self.id

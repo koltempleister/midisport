@@ -1,4 +1,5 @@
 from midisport import instructionparser
+from midisport.preset.preset import Preset
 
 
 def convert(input):
@@ -23,11 +24,14 @@ def test_port_map_to_sysex():
         '8': [1, 8],
     }
 
+    preset = Preset()
+    preset.set_value(config)
+
     expected = '02 00 0A 00 0C 01 00 04 0E 00 08 03 00 08 01 08'
 
     midi_convert = instructionparser.PortMapSysexParser()
 
-    assert midi_convert.out(config) == expected
+    assert midi_convert.out(preset) == expected
 
 
 # def test_output:

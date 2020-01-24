@@ -1,7 +1,9 @@
 class PortMapSysexParser:
     n_ports = 8
 
-    def out(self, config):
+    def out(self, preset):
+
+        config = preset.get_value()
 
         out = []
 
@@ -23,7 +25,6 @@ class PortMapSysexParser:
     def strip(self, hex):
         return hex[:1] + hex[-1]
 
-    # # WIP
     def parse_port(self, input):
         str1 = ''
         str2 = ''
