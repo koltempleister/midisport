@@ -27,7 +27,7 @@ def test_config_2_hex():
 
     midi_convert = midi.Parser()
 
-    assert midi_convert.config_2_hex(config) == expected
+    assert midi_convert.out(config) == expected
 
 
 # def test_output:
@@ -40,6 +40,8 @@ def test_binary_to_hex():
     parser = midi.Parser()
     assert parser.bin2hex('0101') == '05'
     assert parser.bin2hex('1110') == '0E'
+    assert parser.bin2hex('0010') == '02'
+    assert parser.bin2hex('0100') == '04'
 
 
 def test_short_hex():
@@ -47,11 +49,10 @@ def test_short_hex():
     assert strip("0XE") == "0E"
 
 
-# WIP
 def test_parse_port():
     parser = midi.Parser()
 
     assert parser.parse_port([]) == ['0000', '0000']
-    assert parser.parse_port([1]) == ['1000', '0000']
-    assert parser.parse_port([2, 3, 4, 7]) == ['0111', '0010']
-    assert parser.parse_port([1, 8]) == ['1000', '0001']
+    assert parser.parse_port([1]) == ['0001', '0000']
+    assert parser.parse_port([2, 3, 4, 7]) == ['1110', '0100']
+    assert parser.parse_port([1, 8]) == ['0001', '1000']
