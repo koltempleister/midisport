@@ -1,12 +1,10 @@
-
 class Load(object):
 
-    def __init__(self, Preset, PortMapSysexParser):
-        self.preset = Preset
-        self.parser = PortMapSysexParser
+    def __init__(self, preset, portmapsysexparser):
+        self.preset = preset
+        self.parser = portmapsysexparser
 
     # self.preset = preset
 
     def execute(self):
-
         return self.parser.out(self.preset)
