@@ -1,7 +1,3 @@
-from midisport.instructionparser import PortMapSysexParser
-from midisport.preset.preset import Preset
-from midisport.sysex.midi import MidiHandler
-
 
 class Load(object):
 
