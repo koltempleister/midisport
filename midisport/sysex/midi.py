@@ -1,9 +1,5 @@
 import os
 
-import mido
-import rtmidi
-
-
 class MidiHandler(object):
 
     def get_devices(self):
