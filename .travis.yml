@@ -11,4 +11,4 @@ script:
   - coverage run --source midisport -m pytest
 
 after_success:
-  - coverage reportpip freeze >
+  - coverage report
