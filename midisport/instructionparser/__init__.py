@@ -12,7 +12,7 @@ class PortMapSysexParser:
             for binary_string in self.parse_port(config.get(in_port)):
                 out.append(self.bin2hex(binary_string))
 
-        return ' '.join(out)
+        return "0" +  str(preset.get_patch_number()) + " " + ' '.join(out)
 
     def bin2hex(self, binstring):
         return self.strip(self.convert(binstring))

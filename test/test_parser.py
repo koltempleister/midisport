@@ -25,9 +25,10 @@ def test_port_map_to_sysex():
     }
 
     preset = Preset()
+    preset.set_patch_number(3)
     preset.set_value(config)
 
-    expected = '02 00 0A 00 0C 01 00 04 0E 00 08 03 00 08 01 08'
+    expected = '03 02 00 0A 00 0C 01 00 04 0E 00 08 03 00 08 01 08'
 
     midi_convert = instructionparser.PortMapSysexParser()
 

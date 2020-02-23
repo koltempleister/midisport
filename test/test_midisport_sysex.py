@@ -13,6 +13,7 @@ class TestSysex:
         sysex = MidisportSysex('')
         assert sysex.get_device_id() == '7F 00 00 04 00 01'
 
+
     @pytest.mark.parametrize(
         "test_input, expected",
         [
