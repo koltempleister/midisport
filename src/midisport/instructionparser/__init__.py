@@ -1,7 +1,7 @@
 class PortMapSysexParser:
-    n_ports = 8
+    _n_ports = 8
 
-    def out(self, preset):
+    def out(self, preset) -> str:
 
         config = preset.get_value()
 
@@ -9,23 +9,23 @@ class PortMapSysexParser:
 
         for in_port in config.keys():
 
-            for binary_string in self.parse_port(config.get(in_port)):
-                out.append(self.bin2hex(binary_string))
+            for binary_string in self._parse_port(config.get(in_port)):
+                out.append(self._bin2hex(binary_string))
 
         return "0" +  str(preset.get_patch_number()) + " " + ' '.join(out)
 
-    def bin2hex(self, binstring):
-        return self.strip(self.convert(binstring))
+    def _bin2hex(self, binstring) -> str:
+        return self._strip(self._convert(binstring))
 
-    def convert(self, binstring):
+    def _convert(self, binstring) -> str:
         hexstring = "0x%x" % int(binstring, 2)
 
         return hexstring.upper()
 
-    def strip(self, hex):
+    def _strip(self, hex) -> str:
         return hex[:1] + hex[-1]
 
-    def parse_port(self, input):
+    def _parse_port(self, input) -> str:
         str1 = ''
         str2 = ''
         port = 1

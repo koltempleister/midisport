@@ -1,7 +1,7 @@
 from midisport.instructionparser import PortMapSysexParser
 from midisport.preset.preset import Preset
-from midisport.command.load import Load
-from midisport.sysex.midi import MidiHandler
+from midisport.command.load import PresetLoader
+from midisport.sysex.midi import AMidiHandler
 
 if __name__ == '__main__':
 
@@ -22,5 +22,5 @@ if __name__ == '__main__':
         }
     )
 
-    load = Load(preset, PortMapSysexParser(), 'MidiSport 8x8 Control', MidiHandler())
+    load = PresetLoader(preset, PortMapSysexParser(), 'MidiSport 8x8 Control', AMidiHandler())
     load.execute()

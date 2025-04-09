@@ -1,0 +1,9 @@
+[project]
+name = "midisport"
+version="0.1"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = [
+    "--import-mode=importlib",
+]

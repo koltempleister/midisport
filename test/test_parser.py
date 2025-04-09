@@ -4,12 +4,12 @@ from midisport.preset.preset import Preset
 
 def convert(input):
     parser = instructionparser.PortMapSysexParser()
-    return parser.convert(input)
+    return parser._convert(input)
 
 
 def strip(input):
     parser = instructionparser.PortMapSysexParser()
-    return parser.strip(input)
+    return parser._strip(input)
 
 
 def test_port_map_to_sysex():
@@ -43,10 +43,10 @@ def test_binary_to_hex():
     assert convert("1110") == "0XE"
 
     parser = instructionparser.PortMapSysexParser()
-    assert parser.bin2hex('0101') == '05'
-    assert parser.bin2hex('1110') == '0E'
-    assert parser.bin2hex('0010') == '02'
-    assert parser.bin2hex('0100') == '04'
+    assert parser._bin2hex('0101') == '05'
+    assert parser._bin2hex('1110') == '0E'
+    assert parser._bin2hex('0010') == '02'
+    assert parser._bin2hex('0100') == '04'
 
 
 def test_short_hex():
@@ -57,7 +57,7 @@ def test_short_hex():
 def test_parse_port():
     parser = instructionparser.PortMapSysexParser()
 
-    assert parser.parse_port([]) == ['0000', '0000']
-    assert parser.parse_port([1]) == ['0001', '0000']
-    assert parser.parse_port([2, 3, 4, 7]) == ['1110', '0100']
-    assert parser.parse_port([1, 8]) == ['0001', '1000']
+    assert parser._parse_port([]) == ['0000', '0000']
+    assert parser._parse_port([1]) == ['0001', '0000']
+    assert parser._parse_port([2, 3, 4, 7]) == ['1110', '0100']
+    assert parser._parse_port([1, 8]) == ['0001', '1000']
