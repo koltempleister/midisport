@@ -2,7 +2,7 @@
 
 ### Status
 
-[![Python package](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml/badge.svg)](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml)
+[![Python application](https://github.com/koltempleister/midisport/actions/workflows/python-app.yml/badge.svg)](https://github.com/koltempleister/midisport/actions/workflows/python-app.yml)
 
 settings editor for m-audio midisport 8x8
 
