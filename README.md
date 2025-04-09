@@ -2,22 +2,22 @@
 
 ### Status
 
-[![Python package](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml/badge.svg)](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml)
+[![Python application](https://github.com/koltempleister/midisport/actions/workflows/python-app.yml/badge.svg)](https://github.com/koltempleister/midisport/actions/workflows/python-app.yml)
 
 settings editor for m-audio midisport 8x8
 
 still under development
 
 ## cli commands
-
+list all possible presets
 ```bash
 python src/console/console.py showPresets
 ```
-
+show possible devices (midisport isnt detected automatically yet)
 ```bash
 python src/console/console.py showDevices
 ```
-
+load preset onto device
 ```bash
 python src/console/console.py load <preset> <device-name>
 ```
