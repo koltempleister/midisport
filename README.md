@@ -2,7 +2,7 @@
 
 ### Status
 
-[![Build Status](https://travis-ci.org/koltempleister/midisport.svg?branch=master)](https://travis-ci.org/koltempleister/midisport)
+[![Python package](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml/badge.svg)](https://github.com/koltempleister/midisport/actions/workflows/python-package.yml)
 
 settings editor for m-audio midisport 8x8
 
